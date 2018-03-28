@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--HEADER INPUT-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Recipes for Food &amp; Drinks! </title>
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon.ico">
+
+    <!-- Add a link to reset file -->
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+
+    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <!-- Add a link to the Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- Add a link to css file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Add a link to AOS-CSS Library -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<!--start of body-->
+
+<body>
+  
+    <div class="container" id="master">
+
+
+        <!-- Jumbotron -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1 class="display-4">
+                    <b id="headline">Recipes for Food &amp; Drinks!</b>
+                </h1>
+            </div>
+        </div>
+        <hr>
+        <!-- <div class="container"> -->
+        <div class="row">
+
+            <div class="col-sm-9">
+                <br>
+                <!-- First panel is for handling the search parameters -->
+                <div class="panel panel-primary" id="food-panel">
+                    <div class="panel-heading" id="food-panel-heading">
+                        <h3 class="panel-title" id="food-recipe">
+                            <strong>
+                                <i class="fa  fa-list-alt"></i> Food Recipe</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+                        <h2> Search by Recipe Name or Ingredient</h2>
+                        <!-- Here we create an HTML Form for handling the inputs-->
+                        <form role="form">
+
+                            <!-- Here we create the text box for capturing the recipe name-->
+                            <div class="form-group">
+                                <label for="search">Recipe Name</label>
+                                <input type="text" class="form-control" id="food-input">
+                            </div>
+
+                            <form role="form">
+
+                                <!-- Here we create the text box for capturing the ingredient-->
+                                <div class="form-group">
+                                    <label for="search">Ingredient</label>
+                                    <input type="text" class="form-control" id="ingredient">
+
+                                </div>
+                                <!-- Here we create a colorie selector -->
+
+                                <!-- <h6>
+                                    <b>Calorie Count</b>
+                                </h6>
+                                <select class="form-control" id="calories">
+                                    <option value="select">Select</option>
+                                    <option value="0-300">&lt;300</option>
+                                    <option value="301-600">301-600</option>
+                                    <option value="601-900">601-900</option>
+                                    <option value="901-1200">901-1200</option>
+                                    <option value="&gt;1200">
+                                        &gt;1200
+                                    </option>
+                                </select>
+                                <br>
+                                <br> -->
+                                <!-- Here we have our food search submit button -->
+                                <button type="submit" class="btn btn-default" id="search-food">
+                                    <i class="fa fa-search"></i> Submit</button>
+
+
+                            </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Here we create a history panel -->
+            <div class="col-md-3">
+                <br>
+                <aside class="panel panel-primary" id="history-panel">
+                    <div class="panel-heading" id="history-panel-heading">
+                        <h3>Search History</h3>
+                    </div>
+                    <div>
+                        <h4 id="dish-div">Dishes</h4>
+                        <ul id="dish-history"></ul>
+                    </div>
+                    <div>
+                        <h4 id="drink-div">Drinks</h4>
+                        <ul id="drink-history"></ul>
+                    </div>
+                </aside>
+            </div>
+
+        </div>
+        <!-- </div> -->
+
+        <div class="row">
+            <div class="col-sm-9">
+                <br>
+                <!-- Second panel is for searching for drinks -->
+                <div class="panel panel-primary" id="drink-panel">
+                    <div class="panel-heading" id="drink-panel-heading">
+                        <h3 class="panel-title" id="drink-recipe">
+                            <strong>
+                                <i class="fa  fa-glass"></i> Drink Recipe</strong>
+                        </h3>
+                    </div>
+                    <div class="panel-body">
+
+                        <!-- Here we create an HTML Form for handling the inputs-->
+                        <form role="form">
+
+                            <!-- Here we create the selector for choosing Alcoholic/NonAlcoholic-->
+
+                            <!-- <h6>
+                                <b>Alcoholic/Non-Alcoholic</b>
+                            </h6>
+                            <select class="form-control" id="alcohol">
+                                <option value="Select">Select</option>
+                                <option value="Alcoholic">Alcoholic</option>
+                                <option value="Non-Alcoholic">Non-Alcoholic</option>
+                            </select>
+                            <br>
+                            <br> -->
+                            <!-- This is the input box for drink name -->
+                            <div class="form-group">
+                                <label for="search">Drink Name</label>
+                                <input type="text" class="form-control" id="drink-input">
+                            </div>
+
+                            <!-- Selector for type of liquor -->
+                            <!-- <h6>
+                                <b>Liquor</b>
+                            </h6>
+                            <select class="form control" id="liqour-type">
+                                <option value="Select">Select</option>
+                                <option value="Vodka">Vodka</option>
+                                <option value="Gin">Gin</option>
+                                <option value="Rum">Rum</option>
+                                <option value="Tequil">Tequila</option>
+                                <option value="Whiskey">Whiskey</option>
+                            </select>
+                            <br>
+                            <br> -->
+
+                            <!-- Here we have our final submit button -->
+                            <button type="submit" class="btn btn-default" id="search-drink">
+                                <i class="fa fa-search"></i> Submit</button>
+
+                            <!-- This panel will initially be made up of a panel and wells for each of the articles retrieved -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <!-- Panel Heading for the retrieved articles box -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="panel panel-primary" id="results-panel">
+                    <div class="panel-heading" id="results-panel-heading">
+                        <h3 class="panel-title" id="results-title">
+                            <strong>
+                                <i class="fa fa-table"></i> Top Results</strong>
+                        </h3>
+                    </div>
+
+                    <!-- This main panel will hold each of the resulting articles -->
+                    <div class="panel-body" id="food-drink-view"></div>
+                    <br>
+                    <hr>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="p"> This Wesbite Was Created By: Steven Mezzacappa, Dan Straw, &amp; Mohammad Soheili
+        </div>
+        <div class="p">
+            Eat Well, Drink Well.</div>
+    </div>
+
+
+    <!-- Add to the Bootstrap-JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <!-- Add a link to the AOS Library -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <!-- Add a link to the JQuery Library-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- add firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+    <!-- Add a link to SweetAlert Library -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Add a link to the javascript file -->
+    <script type="text/javascript" src="assets/javascript/java.js"></script>
+</body>
+
+</html>
